@@ -1,10 +1,11 @@
 # Project Blue nanoGPT: Local Real Estate Intelligence for Pima County, AZ 
 
 # Team Members
-## Emeka Ekwenibe
-## Elizabeth Maziarka
-## Ricardo Gonzalez
-## Leonardo Montoya
+### Emeka Ekwenibe
+### Elizabeth Maziarka
+### Ricardo Gonzalez
+### Leonardo Montoya
+### Thinh Nguyen
 
 ## Problem Statement
 Who is the user?
