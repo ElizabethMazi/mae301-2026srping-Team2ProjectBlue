@@ -1,4 +1,5 @@
 # Project Blue nanoGPT: Local Real Estate Intelligence for Pima County, AZ 
+![image alt](https://github.com/ElizabethMazi/mae301-2026srping-Team2ProjectBlue/blob/67224cd137ba33c61bc620486fc766536b058cb8/proposal/Team%202%20logo.png)
 
 # Team Members
 ### Emeka Ekwenibe
