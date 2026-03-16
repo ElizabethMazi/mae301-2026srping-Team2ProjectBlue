@@ -2,7 +2,7 @@
 
 # Team Members
 ## Emeka Ekwenibe
-## Elizabeth Mazi
+## Elizabeth Maziarka
 ## Ricardo Gonzalez
 ## Leonardo Montoya
 
