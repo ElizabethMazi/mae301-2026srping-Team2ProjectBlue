@@ -1,1 +1,15 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
 
+# Downloaded raw documents
+data/raw/*
+!data/raw/.gitkeep
+
+# Optional later if processed/final get large:
+# data/processed/*
+# !data/processed/.gitkeep
+# data/final/*
+# !data/final/.gitkeep
