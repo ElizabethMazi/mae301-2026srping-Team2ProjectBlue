@@ -1,1 +1,4 @@
-
+# Put direct PDF links here, one per line.
+# Example:
+# https://www.example.gov/documents/plan.pdf
+# https://www.example.gov/documents/zoning-update.pdf
