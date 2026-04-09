@@ -8,6 +8,9 @@ venv/
 data/raw/*
 !data/raw/.gitkeep
 
+# Don't want API key leaked
+.env
+
 # Optional later if processed/final get large:
 # data/processed/*
 # !data/processed/.gitkeep
