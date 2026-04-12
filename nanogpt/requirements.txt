@@ -1,2 +1,5 @@
-requests
-pdfplumber
+openai
+sklearn
+numpy
+streamlit
+python-dotenv
