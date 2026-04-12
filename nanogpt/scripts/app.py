@@ -1,13 +1,13 @@
 import streamlit as st
 
-from src.retrieve import search
-from src.generate import generate_answer
-
 st.title("Project Blue AI Assistant")
 
 query = st.text_input("Ask a question about development:")
 
 if query:
+    from src.retrieve import search
+    from src.generate import generate_answer
+
     docs = search(query)
     answer = generate_answer(query, docs)
 
