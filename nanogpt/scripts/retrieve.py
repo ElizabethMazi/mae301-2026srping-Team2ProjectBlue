@@ -1,40 +1,36 @@
-import sys
-import os
-sys.path.append(os.path.abspath("."))
-
 import pickle
 import numpy as np
+from sklearn.metrics.pairwise import cosine_similarity
+import streamlit as st
 
-from src.load import load_data
-from src.embed import embed, prepare_text
+from src.embed import embed
 
 
-# Make sure embeddings folder exists
-os.makedirs("embeddings", exist_ok=True)
+# Cache the data so it only loads once
+@st.cache_resource
+def load_data():
+    with open("embeddings/vectors.pkl", "rb") as f:
+        vectors = pickle.load(f)
 
-# Load data
-data = load_data("data/documents.jsonl")
+    with open("embeddings/metadata.pkl", "rb") as f:
+        metadata = pickle.load(f)
 
-vectors = []
-metadata = []
+    return vectors, metadata
 
-# Create embeddings
-for row in data:
-    text = prepare_text(row)
-    vector = embed(text)
 
-    vectors.append(vector)
-    metadata.append(row)
+def search(query, k=5):
+    # Load cached data
+    vectors, metadata = load_data()
 
-# Convert to numpy array
-vectors = np.array(vectors).astype("float32")
+    # Convert query to vector
+    q_vec = embed(query)
+    q_vec = np.array([q_vec]).astype("float32")
 
-# Save vectors
-with open("embeddings/vectors.pkl", "wb") as f:
-    pickle.dump(vectors, f)
+    # Compute similarity scores
+    similarities = cosine_similarity(q_vec, vectors)[0]
 
-# Save metadata
-with open("embeddings/metadata.pkl", "wb") as f:
-    pickle.dump(metadata, f)
+    # Get top k most similar indices
+    top_k = np.argsort(similarities)[-k:][::-1]
 
-print("Index built successfully!")
+    # Return matching documents
+    return [metadata[i] for i in top_k]
