@@ -11,6 +11,8 @@ data/raw/*
 # Don't want API key leaked
 .env
 
+embeddings/
+
 # Optional later if processed/final get large:
 # data/processed/*
 # !data/processed/.gitkeep
