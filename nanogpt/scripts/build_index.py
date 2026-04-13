@@ -5,8 +5,8 @@ sys.path.append(os.path.abspath("."))
 import pickle
 import numpy as np
 
-from src.load import load_data
-from src.embed import embed, prepare_text
+from scripts.load import load_data
+from scripts.embed import embed, prepare_text
 
 
 # Make sure embeddings folder exists
