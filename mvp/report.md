@@ -44,3 +44,29 @@ A user asks:
 
 ```text
 What developments are planned near this neighborhood?
+
+
+3. System Design
+Architecture
+User Input
+   |
+   v
+Web Interface
+   |
+   v
+Retriever System
+   |
+   v
+Relevant Document Chunks
+   |
+   v
+Language Model
+   |
+   v
+Final Response
+Data Flow
+User enters a question
+System searches indexed planning documents
+Relevant passages are retrieved
+AI model generates grounded summary
+User receives final response
