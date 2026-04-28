@@ -1,0 +1,6 @@
+openai
+sklearn
+numpy
+streamlit
+python-dotenv
+pdfplumber
