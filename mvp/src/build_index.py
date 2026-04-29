@@ -8,7 +8,6 @@ import numpy as np
 from src.load import load_data
 from src.embed import embed, prepare_text
 
-
 # Make sure embeddings folder exists
 os.makedirs("embeddings", exist_ok=True)
 
@@ -19,12 +18,26 @@ vectors = []
 metadata = []
 
 # Create embeddings
-for row in data:
-    text = prepare_text(row)
-    vector = embed(text)
+for i, row in enumerate(data):
+    print(f"\nProcessing {i+1}/{len(data)}")
 
-    vectors.append(vector)
-    metadata.append(row)
+    text = prepare_text(row)
+    print(f"Text length: {len(text)}")
+
+    # Skip extremely large chunks (prevents hanging)
+    if len(text) > 5000:
+        print(f"Skipping {i} (text too long)")
+        continue
+
+    try:
+        vector = embed(text)
+
+        vectors.append(vector)
+        metadata.append(row)
+
+    except Exception as e:
+        print(f"Skipping {i} due to error: {e}")
+        continue
 
 # Convert to numpy array
 vectors = np.array(vectors).astype("float32")
@@ -37,4 +50,4 @@ with open("embeddings/vectors.pkl", "wb") as f:
 with open("embeddings/metadata.pkl", "wb") as f:
     pickle.dump(metadata, f)
 
-print("Index built successfully!")
+print("\nIndex built successfully!")
