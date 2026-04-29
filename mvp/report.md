@@ -90,6 +90,19 @@ This structure allows the model to answer based on real documents instead of gue
 
 ---
 
+# 3.5 User Interface
+
+The MVP includes a Streamlit-based web interface designed for ease of use by non-technical users.
+
+Users can:
+- Enter natural language questions about future development
+- Receive AI-generated responses in real time
+- View the planning document sources used for each answer
+
+The interface is intentionally simple and focuses on clarity, allowing first-time homebuyers to quickly understand relevant information without needing technical knowledge.
+
+---
+
 # 4. Data
 
 ## Sources
@@ -169,6 +182,18 @@ Will traffic increase near this area?
 
 The system summarized likely road expansion projects and future congestion concerns based on planning records.
 
+## Example Output
+
+### User Question:
+Will traffic increase in this area?
+
+### Model Response:
+(Insert actual output from your app here if possible)
+
+### Sources:
+- 2045 RMAP Update
+- Transportation Planning Document
+
 ## Key Findings
 
 - Responses were easy to understand
@@ -212,7 +237,29 @@ Public planning sources may not reflect every community perspective.
 
 ---
 
-# 8. Next Steps
+# 8. Demo Instructions
+
+To run the MVP locally:
+
+1. Clone the repository
+2. Install dependencies:
+   pip install -r requirements.txt
+
+3. Build the embedding index:
+   python src/build_index.py
+
+4. Launch the application:
+   streamlit run src/app.py
+
+5. Open the browser and enter questions such as:
+   - "Are there future developments planned nearby?"
+   - "Will traffic increase in Pima County?"
+
+The system will generate a response and display supporting sources.
+
+---
+
+# 9. Next Steps
 
 ## Technical Improvements
 
