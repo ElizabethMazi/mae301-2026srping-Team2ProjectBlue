@@ -90,6 +90,17 @@ This structure allows the model to answer based on real documents instead of gue
 
 ---
 
+# 3.5 User Interface
+
+The MVP includes a Streamlit-based web interface designed for ease of use by non-technical users.
+
+Users can:
+- Enter natural language questions about future development
+- Receive AI-generated responses in real time
+- View the planning document sources used for each answer
+
+The interface is intentionally simple and focuses on clarity, allowing first-time homebuyers to quickly understand relevant information without needing technical knowledge.
+
 # 4. Data
 
 ## Sources
