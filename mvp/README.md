@@ -36,7 +36,8 @@ mvp/
 ├── data/
 │   ├── CleanDataCode.py   # Code used to convert PDFs to txt and clean it
 │   ├── CreateJSON.py      # Code used to create the JSONL file
-│   └── dataset.jsonl      # Structured dataset
+|   ├── dataset.jsonl      # Structured dataset
+│   └── rawData.txt        # list of source PDFs with links used
 │
 ├── src/
 │   ├── __init__.py
