@@ -12,7 +12,6 @@ Project Blue AI is a retrieval-augmented AI assistant designed to help first-tim
 
 * Python 3.9+
 * Git
-* (Recommended) Virtual environment tool (venv or conda)
 
 ### Step 1: Clone the Repository
 
@@ -21,15 +20,7 @@ git clone https://github.com/your-username/project-blue-ai.git
 cd project-blue-ai
 ```
 
-### Step 2: Create Virtual Environment (optional)
-
-```bash
-python -m venv venv
-source venv/bin/activate   # Mac/Linux
-venv\Scripts\activate      # Windows
-```
-
-### Step 3: Install Dependencies
+### Step 2: Install Dependencies
 
 ```bash
 pip install -r requirements.txt
