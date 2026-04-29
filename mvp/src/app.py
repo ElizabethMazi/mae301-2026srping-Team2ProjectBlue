@@ -72,5 +72,11 @@ if query:
     st.write(answer)
 
     st.subheader("Sources")
+
+    seen_sources = set()
+
     for d in docs:
-        st.write(f"{d['source']}")
+        source = d["source"]
+        if source not in seen_sources:
+            st.write(source)
+            seen_sources.add(source)
